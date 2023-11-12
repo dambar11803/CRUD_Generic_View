@@ -1,0 +1,16 @@
+{% if messages %}
+{% for message in messages %}
+    <div class="text-center alert alert-{{ message.tags }}" id="msg">
+        {{ message|safe }}
+    </div>
+{% endfor %}
+{% endif %}
+
+
+<script>
+    var message_ele = document.getElementById("msg");
+        setTimeout(function() {
+        message_ele.style.display = "none";
+      }, 3000);
+
+</script>

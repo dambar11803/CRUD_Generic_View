@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} Homepage  {% endblock title %}
+{% block css %}   {% endblock css %}
+
+{% block bodycontent %}
+<div class="container text-center">
+    
+    <form action="" method="POST">
+        {% csrf_token %}
+        <h4>Are your Sure?</h4>
+        <input type="submit" value="Delete">
+        <a href="{% url 'studentlist' %}">Cancel</a>
+    </form>
+</div>
+ 
+{% endblock bodycontent %}
+ 

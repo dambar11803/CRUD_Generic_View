@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} StudentDetail  {% endblock title %}
+{% block css %} <link rel="stylesheet" href="{% static 'css/student_detail.css' %}">  {% endblock css %}
+
+{% block bodycontent %}
+
+<div class="container">
+    <p class="text-center fs-5 text-decoration-unerline text-danger">{{student.name}} Detail </p>
+    <table class="mx-auto table-bordered border-danger mt-5 text-center">
+      <tr>
+        <th>Name</th><td>{{student.name}}</td>
+      </tr>    
+      <tr>
+        <th>Address</th><td>{{student.address}}</td>
+      </tr>
+      <tr>
+        <th>Roll</th><td>{{student.roll}}</td>
+      </tr>
+      <tr>
+        <th>Grade</th><td>{{student.grade}}</td>
+      </tr>
+      <tr>
+        <th>Joined Date</th><td>{{student.add_date}}</td>
+      </tr>
+      <tr>
+        <th>Date of Birth</th><td>{{student.dob}}</td>
+      </tr>
+      <tr>
+        <th>Gender</th><td>{{student.gender}}</td>
+      </tr>
+      <tr>
+      <th colspan="2">
+        <p><img src="{{ student.pic.url }}" class="upload_image text-center py-2" alt="Uploaded Image"></p>
+      </th>
+    </tr>
+    </table>
+    
+    
+    
+</div>
+ 
+{% endblock bodycontent %}
+ 
